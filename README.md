@@ -1,4 +1,4 @@
-[![CodeQL](https://github.com/sorzkode/eksel/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/sorzkode/eksel/actions/workflows/codeql-analysis.yml)
+[![CodeQL](https://github.com/sorzkode/eksel/actions/workflows/codeql.yml/badge.svg)](https://github.com/sorzkode/eksel/actions/workflows/codeql.yml)
 [[MIT Licence](https://en.wikipedia.org/wiki/MIT_License)]
 
 
