@@ -36,23 +36,27 @@ import xlwings as xw
 # PySimpleGUI version info
 psversion = sg.version
 
+# Initialize variables
+excel_file = ""
+save_path = ""
+
 # File selection function
 def select_file():
-    global excel_file 
     excel_file = sg.popup_get_file('Select your Excel File', file_types=(("Excel Files", "*.xlsx;*.xlsm;*.xls"),), title='File Selection', grab_anywhere=True, keep_on_top=True)
     
     if not excel_file: 
         sg.popup_cancel('No file selected', grab_anywhere=True, keep_on_top=True)
         return
+    return excel_file
 
 # Save location selection function
 def select_folder():
-    global save_path
     save_path = sg.popup_get_folder('Select your Excel File', title='Folder Selection', grab_anywhere=True, keep_on_top=True)
     
     if not save_path:
         sg.popup_cancel('No folder selected', grab_anywhere=True, keep_on_top=True)
         return
+    return save_path
 
 # GUI window theme
 sg.theme('Default1')
@@ -103,7 +107,7 @@ while True:
         try:
             sheetbox1.clear()
             sheetbox2.clear()
-            select_file()                                             
+            excel_file = select_file()                                             
             window['-XLFILE-'].update(excel_file, text_color='Black') 
             wb = xlapp.books.open(excel_file)
             box1_count = 0                         
@@ -144,43 +148,47 @@ while True:
 
 # Save listbox #1
     if event == 'Save Box #1':
-        select_folder()
-        for sheet in sheetbox1:
-            wb.sheets[sheet].api.Copy()
-            newbook = xw.books.active
-            newbook.save(f'{save_path}/{sheet}.xlsx')
-            newbook.close()
-        window['Clear All'].update(disabled=True)
-        window['Save Box #1'].update(disabled=True)
-        window['Save Box #2'].update(disabled=True)
-        window['-XLFILE-'].update('Success! Try another file.')
-        window['-SHEETBOX1-'].update(lbox1)
-        window['-SHEETBOX1-'].update(disabled=True)
-        window['-SHEETBOX2-'].update(lbox2)
-        window['-SHEETBOX2-'].update(disabled=True)
-        sheetbox1.clear()
-        sheetbox2.clear()
-        sg.popup('Success!', keep_on_top=True)
+        try:
+            save_path = select_folder()
+            for sheet in sheetbox1:
+                wb.sheets[sheet].api.Copy()
+                newbook = xw.books.active
+                newbook.save(f'{save_path}/{sheet}.xlsx')
+                newbook.close()
+            window['Clear All'].update(disabled=True)
+            window['Save Box #1'].update(disabled=True)
+            window['Save Box #2'].update(disabled=True)
+            window['-XLFILE-'].update('Success! Try another file.')
+            window['-SHEETBOX1-'].update(lbox1)
+            window['-SHEETBOX1-'].update(disabled=True)
+            window['-SHEETBOX2-'].update(lbox2)
+            window['-SHEETBOX2-'].update(disabled=True)
+            sheetbox1.clear()
+            sheetbox2.clear()
+            sg.popup('Success!', keep_on_top=True)
+        except: sg.popup('Try again', keep_on_top=True)
 
 # Save listbox #2
     if event == 'Save Box #2':
-        select_folder()
-        for sheet in sheetbox2:
-            wb.sheets[sheet].api.Copy()
-            newbook = xw.books.active
-            newbook.save(f'{save_path}/{sheet}.xlsx')
-            newbook.close()
-        window['Clear All'].update(disabled=True)
-        window['Save Box #1'].update(disabled=True)
-        window['Save Box #2'].update(disabled=True)
-        window['-XLFILE-'].update('Success! Try another file.')
-        window['-SHEETBOX1-'].update(lbox1)
-        window['-SHEETBOX1-'].update(disabled=True)
-        window['-SHEETBOX2-'].update(lbox2)
-        window['-SHEETBOX2-'].update(disabled=True)
-        sheetbox1.clear()
-        sheetbox2.clear()
-        sg.popup('Success!', keep_on_top=True)
+        try:
+            save_path = select_folder()
+            for sheet in sheetbox2:
+                wb.sheets[sheet].api.Copy()
+                newbook = xw.books.active
+                newbook.save(f'{save_path}/{sheet}.xlsx')
+                newbook.close()
+            window['Clear All'].update(disabled=True)
+            window['Save Box #1'].update(disabled=True)
+            window['Save Box #2'].update(disabled=True)
+            window['-XLFILE-'].update('Success! Try another file.')
+            window['-SHEETBOX1-'].update(lbox1)
+            window['-SHEETBOX1-'].update(disabled=True)
+            window['-SHEETBOX2-'].update(lbox2)
+            window['-SHEETBOX2-'].update(disabled=True)
+            sheetbox1.clear()
+            sheetbox2.clear()
+            sg.popup('Success!', keep_on_top=True)
+        except: sg.popup('Try again', keep_on_top=True)
 
 # Clear all button
     if event == 'Clear All':
