@@ -51,7 +51,7 @@ def select_file():
 
 # Save location selection function
 def select_folder():
-    save_path = sg.popup_get_folder('Select your Excel File', title='Folder Selection', grab_anywhere=True, keep_on_top=True)
+    save_path = sg.popup_get_folder('Select Save Location', title='Folder Selection', grab_anywhere=True, keep_on_top=True)
     
     if not save_path:
         sg.popup_cancel('No folder selected', grab_anywhere=True, keep_on_top=True)
