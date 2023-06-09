@@ -6,7 +6,7 @@
 
 # Eksel Splitter
 
-Quickly copy and save worksheets from Excel to a folder of your choosing.
+Eksel Splitter is a Python script that allows you to quickly copy and save worksheets from Excel to a folder of your choosing.
 
 ## Example
 
@@ -14,19 +14,26 @@ Quickly copy and save worksheets from Excel to a folder of your choosing.
 
 ## Installation
 
-Download from Github, changedir (cd) to the script directory and run the following:
+Download the Eksel Splitter script from GitHub.
+
+Open a terminal or command prompt and change the directory (cd) to the script directory.
+
+Run the following command to install the Eksel Splitter package locally:
 ```
 pip install -e .
 ```
 *This will install the Eksel Splitter package locally 
 
-Installation isn't required to run the script but you will need to ensure the requirements below are met.
+Note: Installation isn't required to run the script, but it's recommended to ensure the requirements are met.
 
 ## Requirements
 
-The install above should take care of requirments.
+The installation command above should take care of the requirements automatically. 
 
-Alternatively you can run: pip install -r requirements.txt
+However, if you need to install them manually, you can run:
+```
+pip install -requirements.txt
+```
 
   [[Python 3](https://www.python.org/downloads/)]
 
@@ -42,7 +49,7 @@ If Eksel Splitter is installed you can use the following command syntax:
 ```
 python -m eksel
 ```
-Otherwise you can run the script directly by changing directory (cd) in a terminal of your choice to the Eksel Splitter directory and using the following syntax:
+Alternatively, if you haven't installed the package, change the directory (cd) in a terminal to the Eksel Splitter directory and use the following syntax:
 ```
 python eksel.py
 ```
