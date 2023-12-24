@@ -6,7 +6,7 @@
 
 # Eksel Splitter
 
-Eksel Splitter is a Python script that allows you to quickly copy and save worksheets from Excel to a folder of your choosing.
+Eksel Splitter is a Python script that simplifies the process of copying and saving worksheets from Excel to a folder of your choice. With Eksel Splitter, you can easily manipulate and organize your Excel data by selecting specific worksheets and saving them separately. This script provides a user-friendly interface and offers features such as selecting multiple worksheets, saving in different file formats, and handling conflicting filenames. Whether you need to split large Excel files or extract specific data, Eksel Splitter is a convenient tool to streamline your workflow.
 
 ## Example
 
@@ -14,17 +14,19 @@ Eksel Splitter is a Python script that allows you to quickly copy and save works
 
 ## Installation
 
-Download the Eksel Splitter script from GitHub.
+To install the Eksel Splitter script, follow these steps:
 
-Open a terminal or command prompt and change the directory (cd) to the script directory.
+1. Download the Eksel Splitter script from the [GitHub repository](https://github.com/sorzkode/eksel).
 
-Run the following command to install the Eksel Splitter package locally:
-```
-pip install -e .
-```
-*This will install the Eksel Splitter package locally 
+2. Open a terminal or command prompt and navigate to the directory where you downloaded the script.
 
-Note: Installation isn't required to run the script, but it's recommended to ensure the requirements are met.
+3. Run the following command to install the Eksel Splitter package locally:
+  ```
+  pip install -e .
+  ```
+  This will install the Eksel Splitter package and its dependencies.
+
+  Note: Installation isn't required to run the script, but it's recommended to ensure the requirements are met.
 
 ## Requirements
 
@@ -45,34 +47,39 @@ pip install -requirements.txt
 
 ## Usage
 
-If Eksel Splitter is installed you can use the following command syntax:
-```
-python -m eksel
-```
-Alternatively, if you haven't installed the package, change the directory (cd) in a terminal to the Eksel Splitter directory and use the following syntax:
-```
-python eksel.py
-```
-Once the script is initiated: 
-```
-  1. Click the "Select File" button.
-  2. Select your Excel file and click "ok".
-  3. Manipulate worksheets (if desired).
-  4. Save worksheets using the corresponding button.
-```
+To use Eksel Splitter, follow these steps:
 
-Things to note:
-```
-  * SHEETBOX #1 will populate a list of all worksheet names when a file is selected.
-  * If you want to copy and save all worksheets, click the "Save Box #1" button. Otherwise, click any worksheet names you want to move to SHEETBOX #2.
-  * If names are moved to SHEETBOX #2, the "Save Box #2" button will be enabled.
-  * Determine which listbox you want to save and use the corresponding button.
-  * Names can be switched between the listboxes by clicking on them.
-  * Use the "Clear All" button if you made a mistake or need to start over.
-  * Acceptable filetypes: *.xlsx, *.xlsm, and *.xls.
-  * Worksheets are saved as *.xlsx by default.
-  * Any conflicting filenames will be overwritten by default. 
-```
+1. If you have installed Eksel Splitter, open a terminal or command prompt and run the following command:
+  ```
+  python -m eksel
+  ```
+  If you haven't installed the package, navigate to the Eksel Splitter directory in the terminal using the `cd` command, and then run:
+  ```
+  python eksel.py
+  ```
+
+2. Once the script is initiated, click the "Select File" button.
+
+3. Select your Excel file and click "OK".
+
+4. If desired, manipulate the worksheets by moving them between SHEETBOX #1 and SHEETBOX #2. 
+  - SHEETBOX #1 displays all worksheet names when a file is selected.
+  - To copy and save all worksheets, click the "Save Box #1" button.
+  - To select specific worksheets, click on their names to move them to SHEETBOX #2.
+  - The "Save Box #2" button will be enabled if names are moved to SHEETBOX #2.
+
+5. To save the worksheets, use the corresponding button based on the listbox you want to save.
+
+6. If you need to switch names between the listboxes, simply click on them.
+
+7. If you made a mistake or want to start over, use the "Clear All" button.
+
+8. Eksel Splitter supports the following filetypes: *.xlsx, *.xlsm, and *.xls. Worksheets are saved as *.xlsx by default.
+
+9. By default, any conflicting filenames will be overwritten. 
+
+Note: Make sure you have the necessary requirements installed as mentioned in the "Requirements" section of this README file.
+
 
 
 

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='eksel',
-    version='1.0.0',
+    version='1.1.0',
     description='EKSEL SPLITTER.',
     url='https://github.com/sorzkode/',
     author='Mister Riley',
