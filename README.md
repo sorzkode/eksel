@@ -22,12 +22,9 @@ Eksel Splitter is a Python application that simplifies the process of copying an
 
 ## Demo Video
 
-Watch Eksel Splitter in action:
+https://github.com/user-attachments/assets/b44c888b-a8db-4dde-a9cc-8e988d2bc18f
 
-<video width="100%" controls>
-  <source src="https://raw.githubusercontent.com/sorzkode/eksel/master/assets/eksel-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
 
 Or [click here to watch](https://raw.githubusercontent.com/sorzkode/eksel/master/assets/eksel-demo.mp4) if the video doesn't load.
 
