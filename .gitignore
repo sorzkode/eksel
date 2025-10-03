@@ -28,7 +28,8 @@ MANIFEST
 
 # PyInstaller
 *.manifest
-*.spec
+# Keep eksel.spec for building
+!exe/eksel.spec
 
 # Installer logs
 pip-log.txt
@@ -180,10 +181,9 @@ notes.txt
 TODO.txt
 todo.md
 
-# Build artifacts from PyInstaller
-build/
-dist/
-*.spec
+# Build artifacts from PyInstaller (in exe folder)
+exe/build/
+exe/dist/
 
 # Generated documentation
 docs/_build/

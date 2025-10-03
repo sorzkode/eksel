@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eksel"
+version = "1.1.0"
+description = "Split and save Excel worksheets as separate files"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "sorzkode", email = "sorzkode@proton.me"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Office/Business :: Office Suites",
+    "Topic :: Utilities",
+]
+keywords = ["excel", "xlsx", "xlsm", "xls", "worksheet", "splitter", "gui"]
+requires-python = ">=3.8"
+dependencies = [
+    "xlwings>=0.24.0",
+    "Pillow>=9.0.0",
+    "pyperclip>=1.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sorzkode/eksel"
+Repository = "https://github.com/sorzkode/eksel"
+Issues = "https://github.com/sorzkode/eksel/issues"
+
+[project.gui-scripts]
+eksel = "eksel:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["eksel.py"]

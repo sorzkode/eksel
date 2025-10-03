@@ -14,12 +14,11 @@
 
 Split and save worksheets from Excel.
 
-Author: Mister Riley
-Email: sorzkode@proton.me
+Author: sorzkode
 GitHub: https://github.com/sorzkode
 
 MIT License
-Copyright (c) 2025 Mister Riley
+Copyright (c) 2025 sorzkode
 """
 
 import os
